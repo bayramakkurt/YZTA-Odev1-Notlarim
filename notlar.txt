@@ -1,0 +1,100 @@
+ls : Klasörleri listeler.
+
+clear : Terminali temizler.
+
+pwd : Bulunan konumu gösterir.
+
+mkdir : Yeni klasör oluşturur.
+
+rm : Dosya siler.
+
+rm -rf : Klasör siler.
+
+cd : Belirli klasöre gider.
+
+cd .. : Önceki klasöre gider.
+
+commit : checkpointler
+
+branch : birden çok kişi çalışırken branch ile kodlar dallanır ve karışmaaz sonra birleşir.Tek kişi çalışırkende 2 ayrı tasarım denerken birbirine karışmamasını doğru olanı sonrasında ana projeye dahil etmeye yarar.
+
+git status : Güncel git durumunu gösterir.
+
+git init : git bağlantısı yapar.
+2 defa git init çalıştıtılmamalı önce git status bakılmalı mutlaka.
+
+ls -la : Gizli dosyalarıda gösterir.
+
+untracked files : 
+
+git add : Dosyayı git populasyonuna dahil eder.
+
+git commit -m : Git populasyonundaki dosyaları commit eder ve -m sonrası mesajı ekler.
+
+git log :Git aktivitelerini gösterir.
+
+Yapılan her değişiklikten sonra git add yazılması gerekiyor. git add . yapılırsa bütün değişklikleri alır. Ardından mutlaka git commit -m "messages" yapılmalıdır.
+ 
+.gitignore dosyası açılıp içine gizlenmesi istenen dosyaların adı yazılırsa o dosyalar yüklenmez.
+
+master : ana branch olarak kullanılır. en son bütün değişiklikler ana branch mastera dahil edilir.
+
+HEAD -> master : hangi branchte olduğumuzu gösterir.
+
+git branch : Oluşturulacak yeni branchi oluşturur.
+
+git switch : Branchler arasında geçiş yapılabilir.
+
+git merge : branchleri birleştirir.
+
+git branch : komut branch listesini dönderir.
+ 
+ 2 branchte tutarsız işlemler yapılırsa çakışma olur.
+
+Fast Forwarding: Yeni branchte değişiklikler yap ana branchte yapma ve sonra merge yap.
+
+Eğer değişiklikler add edilip commit edilmez ve başka branch geçilirse o dosya yeni branchtede gözükür.
+
+git restore dosya_adi : önceki sürüme döner.
+
+git stash : değişiklikleri temp gibi saklar.
+
+git stash pop : stashı siler ve listeden atar.
+
+git stash list : stash listesini verir.
+
+git stash apply : Stashı uygular.
+
+git stash clear : Listeyi temizler.
+
+git checkout commit_id : eski commite döner.
+
+
+git reset commit_id : commitleri siler içerikler kalır ve geriye döner.
+
+git reset --hard commit_id: commitleri ve içerikleri siler geriye döner.
+
+git revert commit_id: geriye alma işlemini commit olarak ekler.
+
+git diff : commitler arasındaki değişiklikleri gösterir.ancak add yapılmamış değişiklileri gösterir.
+
+git diff commit_id_2 commit_id_2 : seçilen 2 commit arasındaki farkları gösterir.
+
+git diff branch_name_1 branch_name_2 : 2 branch arasındaki farkları gösterir.
+
+git rebase master : karmaşık merge commitleri sıralar.
+yani 1. branch bütün commitler ardından 2. branch bütün commitler gelir.
+
+git remote add origin repo_url : github reposuna bulunan klasörü addler.
+
+git push -u origin branch_name: dosyaları repoya yükler. 
+
+git fetch : Değişiklik varmı yokmu kontrol eder. 
+
+git pull : Değişiklikleri fetch gibi alır ve merge gibi değşişiklikleri direkt ana kısıma uygular. 
+
+git clone code_url : repoyu cihaza klonlar. Klonlanan dosya sadece fetch edilir push edilemez.
+
+fork : Repoyu githubda klonlar ve istenen değişiklik yapılır.
+
+private : Private repoyu paylaşılan kişi cloneladıktan sonra push yapabilir.
